@@ -1,0 +1,7 @@
+api:
+  build: .
+  command: python run.py
+  ports:
+    - 8888:8888
+  volumes:
+    - ./:/code
