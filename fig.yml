@@ -2,6 +2,11 @@ api:
   build: .
   command: python run.py
   ports:
-    - 8888:8888
+    - 8888:80
   volumes:
     - ./:/code
+  links:
+    - redis
+
+redis:
+  image: redis:2.8.9
